@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = React.forwardRef<HTMLDivElement>((ref: any) => {
+const About = React.forwardRef((props, ref) => {
   return <div>About</div>;
 });
 

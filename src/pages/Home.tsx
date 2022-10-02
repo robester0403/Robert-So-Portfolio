@@ -1,6 +1,10 @@
 import React from "react";
 
-const Home: React.FC = () => {
+interface Props {
+  scroll: (id: string) => void;
+}
+
+const Home: React.FC<Props> = ({ scroll }) => {
   return <div>Home</div>;
 };
 

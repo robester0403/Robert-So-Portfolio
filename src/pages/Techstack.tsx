@@ -1,7 +1,7 @@
 import React from "react";
 
-const Techstack = () => {
+const Techstack = React.forwardRef((props, ref) => {
   return <div>Techstack</div>;
-};
+});
 
 export default Techstack;
