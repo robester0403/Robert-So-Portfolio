@@ -1,0 +1,21 @@
+@use "../styles/partials/global" as *;
+@use "../styles/partials/colors" as *;
+@use "../styles/partials/mixins" as *;
+
+.navbar {
+  background-color: $med-blue;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  min-width: 20rem;
+
+  &__menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__menu-item {
+    margin-left: 1rem;
+  }
+}

@@ -1,11 +1,11 @@
 import React, { useRef, useState, useLayoutEffect, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import NavBar from "./components/NavBar";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Techstack from "./pages/Techstack";
+import "./App.scss";
 
 const App: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -55,24 +55,27 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home scroll={scroll} />
-              <About ref={aboutRef} />
-              <Techstack ref={techstackRef} />
-              <Portfolio ref={portfolioRef} />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/techstack" element={<Techstack />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-      </Routes>
+    <div className="app">
+      <div className="layout-container">
+        <NavBar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home scroll={scroll} />
+                <About ref={aboutRef} />
+                <Techstack ref={techstackRef} />
+                <Portfolio ref={portfolioRef} />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/techstack" element={<Techstack />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </div>
+
     </div>
   );
 };

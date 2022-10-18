@@ -1,0 +1,21 @@
+@use "./src/styles/partials/global.scss";
+@use "./styles/partials/mixins" as *;
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+.layout-container {
+  // border: 1px red solid;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 20rem;
+  max-width: $mobile;
+
+  @include tablet {
+    max-width: $tablet;
+  }
+  @include desktop {
+    max-width: $desktop;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Home.scss";
 import Button from "../components/Button";
 import backgroundImg from "../assets/images/temp-background.jpg";
 
@@ -15,28 +16,12 @@ const Home: React.FC<Props> = ({ scroll }) => {
   }, []);
 
   return (
-    <div className="home" id="home">
-      <img
-        src={backgroundImg}
-        alt="Hero background"
-        className="home__bg-image"
-      />
-      <div className="home__bg-image-overlay"></div>
-      <h1 className={"home__title " + reveal}>
-        Hi, I'm <span className="home__name">Harman Khera</span>
-      </h1>
-      <h1 className={"home__job-title " + reveal}>Full-Stack Web Developer</h1>
-
-      <div className={"home__buttons " + reveal}>
-        <Button
-          onClick={scroll}
-          onClickText="#portfolio"
-          label="View my work"
-        />
-        <a href="mailto:robkso@gmail.com" className="home__contact">
-          <Button label="Get in touch" />
-        </a>
-      </div>
+    <div className="hero">
+      <div>Hello My Name is Robert So. I am a developer</div>
+      <section className="hero__learn-more">
+        <div>Learn a bit more about me</div>
+        <div>down arrow</div>
+      </section>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+@use "../styles/partials/colors" as *;
+@use "../styles/partials/mixins" as *;
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: $light-blue;
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+}
